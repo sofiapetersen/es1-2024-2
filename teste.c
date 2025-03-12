@@ -2,13 +2,14 @@
 #include <math.h>
 
 int main() {
-    int i, j, menu;
+    int i, j, menu = -1;
     printf("Digite o valor de X: ");
     scanf("%d", &i);
     printf("\nDigite o valor de Y: ");
     scanf("%d", &j);
     
-    do {
+    while (menu != 0)
+    {
         printf("\nEscolha uma opcao do menu:\n");
         printf("1 - Soma X + Y\n2 - Subtracao X - Y\n0- Sair\n");
         scanf("%d", &menu);
@@ -18,9 +19,9 @@ int main() {
         } 
         else if (menu == 2) {
             printf("Subtracao: %d\n", i - j);
-        }
-
-    } while (menu != 0);
+        } 
+    }
+    
 
     return 0;
 }
